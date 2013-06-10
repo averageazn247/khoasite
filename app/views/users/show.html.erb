@@ -22,20 +22,66 @@
     </section>
     
     <section>
-    <u><h4> Schedualed Interviews </h4></u>
+   
  
     </section>
     
  
     </section>
+    <% isevent= 0 %>
+     <u><h4> Schedualed Interviews </h4></u>
+ 
+    <% @events.each do |article| %>
+        <% if article.creator == @user.name%>
+        	<% if article.dayof == Date.today%>
+        		  <b><li class="calendar"><%= link_to article.name, article, {:style => "color:red"} %></li></b>
+        		  <%= isevent=1 %>
+        		   <% end %>
+        	<% end %>
+
+        <% end %>       	 
+        <% if isevent== 0 %>
+        
+			No Interviews today   
+			<p> : (</p>
+        	<% end %>
+    </section>
+     
+    <section class="calendar">
     
+    <h2 id="month">
+    	<%= link_to "<", date: @date.prev_month %>
+    <b><Font color=black><%=h @date.strftime("%B %Y") %></Font></b>	
+    	<%= link_to ">", date: @date.next_month %>
+    </h2>
+      <p> 
+    	Interview Dates are in <FONT COLOR=red> Red </FONT>  
+    	</p>
+    <%= calendar(@date) do |date|%>
+    
+    <%= date.day    %>
+  
+ 
+    
+      <% if @events_by_date[date] %>
+      <ul class="calendar">
+        <% @events_by_date[date].each do |article| %>
+        <% if article.creator == @user.name%>
+        	  <b><li class="calendar"><%= link_to article.title , article, {:style => "color:red"} %></li></b>
+        	   <% end %>
+        <% end %>
+      </ul>
+        <% end %>   
+     <% end %>
+    </section>
  
       </section>	
         <%= link_to edit_user_path(@user) do %>
   <i class="icon-ok icon-white"></i>  Edit Profile
 	<% end %>
+	<%= link_to edit_event_path(@event) do %><i class="icon-ok icon-white"></i>  Edit Appointment
 
-
+<% end %>
       
   </aside>
 

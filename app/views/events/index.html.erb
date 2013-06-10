@@ -1,0 +1,39 @@
+<% provide(:title, 'Events') %>
+
+ 
+   
+ <% @events.each do |event| %>
+	 <div class="event_index">
+	 	<h2><%= link_to event.title, event , {:style => "color:red"}%>  </h2>
+	 		Event Day: <b><%= event.dayof %>  </b>
+	 		<p>Starting at: 		<% if event.start_time.hour > 12 %>
+		 
+			<%= event.start_time.hour - 12 %>:
+			
+				<% if event.start_time.min == 0 %>
+				  	00 PM
+				<% else %>
+				
+					<%= event.start_time.min %> PM
+				<% end %>
+			
+			
+		<%else%>
+		 
+			<%= event.start_time.hour %>:
+				<% if event.start_time.min ==0 %>
+				  	00 AM
+				<% else %>
+				
+					<%= event.start_time.min %> AM
+				<% end %>
+					
+				
+      	<% end%></p>
+	 		<p>Created by : <%= event.creator%>  </p>
+		 		Description:
+			<p> <%= simple_format event.description %></p>
+	 <div>
+ <% end %>
+
+

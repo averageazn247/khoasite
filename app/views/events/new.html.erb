@@ -1,0 +1,54 @@
+
+<% provide(:title, 'Setting an Interview') %>
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@event) do |f| %> 
+    		<%= render 'shared/event_error_messages' %>
+    
+	  <section>
+	  	<h3>Set an Interview Time</h3>
+      	<%= f.label "Title of Position Interview"%>
+      	<%= f.text_field :title %>
+      	
+      	<%= f.label " Description of Position"%>
+      	<%= f.text_area :description %> 
+	  	<%= f.label :date%>
+	  	<%= f.text_field :dayof%>
+      </section>
+      
+      <section class="time">
+      	Starting at
+			<%= f.time_select :start_time,
+			  :combined => true,
+			  :default => Time.now.change(:hour => 10, :min => 00),
+			  :minute_interval => 60,
+			  :time_separator => "",
+			  :start_hour => 10,
+  			  :start_minute => 00,
+ 			  :end_hour => 18,
+  			  :end_minute => 30
+			 %>
+      </section>
+      
+  
+            
+      <%= f.hidden_field :creator, :value=> current_user.name%>
+<section>
+
+
+ 
+	  Set Reminder 
+	  <p>
+	  	
+  		One hour before hand text reminder<%= f.check_box :phone  %> 
+	  </p>
+	
+
+	</section>
+ 
+      <%= f.submit "Schedual Interview", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<% provide(:title, @event.title) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+    	<h1> <%= @event.title %></h1>
+      <h1>
+      	<%= "When: "%>
+        <%= @event.dayof%> 
+      </h1>      
+      <h3>
+      	<%= "Starting: "%>
+		<% if @event.start_time.hour > 12 %>
+		 
+			<%= @event.start_time.hour - 12 %>:
+			
+				<% if @event.start_time.min == 0 %>
+				  	00 PM
+				<% else %>
+				
+					<%= @event.start_time.min %> PM
+				<% end %>
+			
+			
+		<%else%>
+		 
+			<%= @event.start_time.hour %>:
+				<% if @event.start_time.min ==0 %>
+				  	00 AM
+				<% else %>
+				
+					<%= @event.start_time.min %> AM
+				<% end %>
+					
+				
+      	<% end%>
+      </h3>
+      
+  
+          </section>
+      <section>
+      	Created by :<p><%= @event.creator %>  </p>
+      	
+      	Descriptions: <p> <%= @event.description%></p>
+      
+  
+  	
+   </section>	
+  </aside>
+</div>
+
+  <section>
+  	<%= link_to "Modify this Appointment! ", '/edit' + @event.id.to_s, class: "btn btn-large btn-primary" %>
+  	<%= link_to "delete", @event, method: :delete,
+                 data: { confirm: "You sure?" }, class: "btn btn-large btn-primary" %> 
+  </section>

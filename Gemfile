@@ -11,6 +11,10 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'simple_form' 
 gem 'rufus-scheduler'
+
+
+
+gem "combined_time_select", "~> 1.0.0"
 gem "mail" 
 gem "combined_time_select", "~> 1.0.0" 
 group :development, :test do

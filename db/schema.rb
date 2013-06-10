@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130607181116) do
+ActiveRecord::Schema.define(:version => 20130610191556) do
 
   create_table "events", :force => true do |t|
     t.datetime "created_at",  :null => false
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130607181116) do
     t.date     "dayof"
     t.time     "start_time"
     t.text     "description"
+    t.boolean  "phone"
   end
 
   create_table "users", :force => true do |t|
