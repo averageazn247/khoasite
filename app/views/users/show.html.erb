@@ -1,0 +1,42 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h2>
+        <%= gravatar_for @user %>
+       <b>  <%= @user.name  %> </b> 
+      </h2>
+    </section>
+    <section>
+    	<p>Cell : <b><%= @user.phone%></b></p>
+    	<p>
+    		Email : <b> <%= @user.email %> </b> 
+    	</p>
+    	<p>
+    		Company : <b><%= @user.company%></b>
+    	</p>
+    	<p>
+    		Website : <b> <%= @user.web%></b>
+    	</p>
+    	
+    </section>
+    
+    <section>
+    <u><h4> Schedualed Interviews </h4></u>
+ 
+    </section>
+    
+ 
+    </section>
+    
+ 
+      </section>	
+        <%= link_to edit_user_path(@user) do %>
+  <i class="icon-ok icon-white"></i>  Edit Profile
+	<% end %>
+
+
+      
+  </aside>
+
+</div>

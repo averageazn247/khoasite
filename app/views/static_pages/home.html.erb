@@ -1,0 +1,24 @@
+<div class="center hero-unit">
+  <h1>Welcome to Khoa's website</h1>
+
+  <h2>
+    by Khoa Bui using Ruby on Rails with SQLITE3 database
+    
+  </h2>
+  
+  <% if signed_in? %>
+ <%= link_to "Schedual a Phone interview time now! ", '/create', class: "btn btn-large btn-primary" %>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  
+ <%= link_to "My Current Events! ", current_user, class: "btn btn-large btn-primary" %>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  
+ 
+ 
+ <% else %>
+  <%= link_to "Sign up now! ", signup_path, class: "btn btn-large btn-primary" %>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <%= link_to "Login!", '/signin', class: "btn btn-large btn-primary" %>
+  <% end %>
+</div>
+ 
