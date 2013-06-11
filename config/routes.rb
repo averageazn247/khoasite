@@ -1,6 +1,10 @@
 Khoasite::Application.routes.draw do
    resources :users
-   resources :events
+   resources :events do
+     collection do
+      put :cancel
+      end
+     end
    resources :sessions, only: [:new, :create, :destroy]
 
 
@@ -11,12 +15,13 @@ Khoasite::Application.routes.draw do
      match '/about', to: 'static_pages#about'
      match '/contact', to: 'static_pages#contact'
       
-      
+     match '/attach', to: 'attachments#new'
      match '/create' , to: 'events#new' 
      match '/edit:id', to: 'events#edit'
      match '/index' , to: 'events#index'
-      
-  
+     
+    
+    match '/all', to: 'upload#all'
   root to: 'static_pages#home' 
   
 

@@ -6,27 +6,27 @@
     <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages' %>
 
-      <%= f.label :name, "*Name" %> 
+      <%= f.label :name, "*Name" , :size => 40  %> 
       <%= f.text_field :name %>
 
-      <%= f.label :email, "*Email" %>
+      <%= f.label :email, "*Email " , :size => 40 %>
       <%= f.text_field :email %>
       
-      <%= f.label :password ,"*Password" %>
+      <%= f.label :password ,"*Password", :size => 40  %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "*Confirm password" %>
+      <%= f.label :password_confirmation, "*Confirm password", :size => 40 %>
       <%= f.password_field :password_confirmation %>
 
       
-      <%= f.label :phone ,"Phone XXX-XXX-XXXX"%>
+      <%= f.label :phone ,"Phone XXX-XXX-XXXX" , :size => 80 %>
       <%= f.text_field :phone %>
       
  
-      <%= f.label :company %>
+      <%= f.label :company , :size => 40 %>
       <%= f.text_field :company %>  
       
-       <%= f.label :web, "Website" %>
+       <%= f.label :web, "Website" , :size => 40 %>
       <%= f.text_field :web %>            
           
 

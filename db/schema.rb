@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130610191556) do
+ActiveRecord::Schema.define(:version => 20130611190334) do
+
+  create_table "attachments", :force => true do |t|
+    t.string "filename"
+    t.string "creater"
+    t.string "title"
+    t.binary "data"
+  end
+
+  create_table "data_files", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "filename"
+    t.string   "name"
+    t.string   "title"
+    t.binary   "data"
+  end
 
   create_table "events", :force => true do |t|
     t.datetime "created_at",  :null => false

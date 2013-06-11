@@ -34,4 +34,20 @@ Khoasite::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  
+  # Don't care if the mailer can't send
+config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  ActionMailer::Base.smtp_settings = {
+                    :address        => "smtp.gmail.com",
+                    :port           => 587,
+                    :authentication => :plain,
+                    :user_name      => "khoa.mail.bot@gmail.com",
+                    :password       => "pizza9804",
+                    :openssl_verify_mode  => 'none'
+  } 
+# Specify what domain to use for mailer URLs
+config.action_mailer.default_url_options = {host: "localhost:3000"}
 end

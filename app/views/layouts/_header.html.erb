@@ -4,8 +4,7 @@
       <%= link_to "Khoa's Online Resume", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-        	 
-          <li><%= link_to "Home", root_path %></li>
+        	  
           
                     <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -33,15 +32,20 @@
                 
  					<%= link_to "Rails 1", '#' %>
               </ul>
-              	
-              	
+              	<li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              	About Khoa
+              	<b class="caret"></b> </a>
+              	<ul class="dropdown-menu">
           <li><%= link_to "About Khoa", '/about' %></li>
-          <li><%= link_to "Contact", '/contact' %></li>
+          <li><%= link_to "Contact Info", '/contact' %></li>
+          
+           </ul>
           <% if signed_in? %>
             
-            
+              <li><%= link_to "Upload an Offer", '/about' %></li>
             <li id="fat-menu" class="dropdown">
-            	<li><%= link_to "Set an Interview",'/create' %></li>
+            	<li><%= link_to "Set Up an Interview",'/create' %></li>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Logged in as <%=   current_user.name %> <b class="caret"></b>
               </a>
@@ -49,6 +53,7 @@
                 <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                 <li> <%= link_to "Schedule an Interview", '/create' %></li>
+                <li> <%= link_to "View all Appointments", '/index' %>  
                 
                    
                 <li class="divider"></li>

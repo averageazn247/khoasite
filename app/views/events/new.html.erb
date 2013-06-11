@@ -9,8 +9,8 @@
     
 	  <section>
 	  	<h3>Set an Interview Time</h3>
-      	<%= f.label "Title of Position Interview"%>
-      	<%= f.text_field :title %>
+      	<%= f.label "Title of Position Interview", :size => 40 %>
+      	<%= f.text_field :title  %>
       	
       	<%= f.label " Description of Position"%>
       	<%= f.text_area :description %> 
@@ -42,7 +42,7 @@
 	  Set Reminder 
 	  <p>
 	  	
-  		One hour before hand text reminder<%= f.check_box :phone  %> 
+  		One day before hand email reminder<%= f.check_box :phone  %> 
 	  </p>
 	
 

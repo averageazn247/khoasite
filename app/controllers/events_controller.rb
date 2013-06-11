@@ -54,7 +54,7 @@ class EventsController < ApplicationController
   def destroy
     Event.find(params[:id]).destroy
     flash[:success] = "Appointment removed."
-    redirect_to users_url
+    redirect_to current_user
   end
   
   

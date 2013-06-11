@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def create
      @user = User.new(params[:user])
     if @user.save
-      #UserMailer.registration_confirmation(@user).deliver
+      UserMailer.signup_confirmation(@user).deliver
      sign_in @user
       flash[:success] = "Thanks for registering!"
       redirect_to @user
@@ -65,4 +65,11 @@ class UsersController < ApplicationController
     end
  
    
+
+def cancel
+  Event.update_all({discontinued: true}, {id: params[:event_ids]})
+  redirect_to events_url
+end
+
+
 end
