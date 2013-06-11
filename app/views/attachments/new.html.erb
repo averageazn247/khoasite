@@ -1,15 +1,15 @@
 <% provide(:title, 'Uploading') %>
 
 
-<h1> In Attachment </h1>
+<h1> In Attachment 1 </h1>
  
  
-<% form_tag 'create', :multipart => true do %>
-
-   <%= label_tag(:title, "Title:") %>
-  <%= text_field_tag(:title) %>
+ 
+<%= form_for @attachment, :html => { :multipart => true } do |f| %>
+  Upload file: <%= f.file_field( "form", "file" ) %>
+  <br />
+  <%= f.submit( "Upload file" ) %>
   
-   <%= file_field_tag :file %>
-      <%= submit_tag "Upload" %>
-<% end %>
- 
+  
+   
+<%= end %>

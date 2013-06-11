@@ -5,6 +5,9 @@ Khoasite::Application.routes.draw do
       put :cancel
       end
      end
+     resources :attachments do
+       collection {post :import}
+     end
    resources :sessions, only: [:new, :create, :destroy]
 
 

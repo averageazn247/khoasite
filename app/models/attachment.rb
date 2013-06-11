@@ -16,4 +16,7 @@ class Attachment < ActiveRecord::Base
         #replace all non-alphanumeric, underscore or periods with underscores
         just_filename.gsub(/[^\w\.\-]/, '_')
     end
+    
+
+
 end
