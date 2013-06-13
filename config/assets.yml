@@ -1,0 +1,5 @@
+s3_bucket: YOUR_BUCKET_HERE
+s3_access_key_id: <%= ENV['AKIAJCUK7Q6QB4GPYBRQ'] %>
+s3_secret_access_key: <%= ENV['/uvrEeQuxZI68XQnhvE5FS+W/M0Na7wBhlyu6g0t'] %>
+s3_upload_files:
+  -  public/assets/**/*
