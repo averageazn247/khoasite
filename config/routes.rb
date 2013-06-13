@@ -23,6 +23,8 @@ Khoasite::Application.routes.draw do
      match '/edit:id', to: 'events#edit'
      match '/index' , to: 'events#index'
      
+    match '/fanorona', to: 'static_pages#fanorona'
+    
     
     match '/all', to: 'upload#all'
   root to: 'static_pages#home' 
