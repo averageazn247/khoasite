@@ -53,14 +53,18 @@ Khoasite::Application.configure do
 
   # Enable threaded mode
   # config.threadsafe!
-
+config.assets.manifest = 'public/manifest'
+  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+  # the I18n.default_locale when a translation can not be found)
+ config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server
+  config.action_controller.asset_host = "http://YOUR_BUCKET_NAME.s3.amazonaws.com"
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
-
+  
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5

@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby' 
-gem 'sqlite3', '1.3.5'
+#gem 'sqlite3', '1.3.5'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6' 
@@ -17,14 +17,13 @@ gem 'carrierwave'
 gem "combined_time_select", "~> 1.0.0"
 gem "mail" 
 gem "combined_time_select", "~> 1.0.0" 
-group :development, :test do
-  gem 'sqlite3', '1.3.5'
+group :development, :test do 
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
   gem 'guard-spork', '1.2.0'
   gem 'childprocess', '0.3.6'
   gem 'spork', '0.9.2'
-
+  gem 'jammit-s3'
 end
 group :development do
   gem 'annotate', '2.5.0'
