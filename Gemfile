@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'simple_form' 
 gem 'rufus-scheduler'
-
+gem "paperclip", "~> 3.0"
 gem 'carrierwave'
 
 gem "combined_time_select", "~> 1.0.0"

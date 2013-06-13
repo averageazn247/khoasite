@@ -5,8 +5,8 @@
  
  
  
-<%= form_for @attachment, :html => { :multipart => true } do |f| %>
-  Upload file: <%= f.file_field( "form", "file" ) %>
+<%= form_for :wordfile, :html => { :multipart => true } do |f| %>
+  Upload file: <%= f.file_field :word  %>
   <br />
   <%= f.submit( "Upload file" ) %>
   
