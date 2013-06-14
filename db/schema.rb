@@ -20,15 +20,6 @@ ActiveRecord::Schema.define(:version => 20130613190244) do
     t.binary "data"
   end
 
-  create_table "data_files", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "filename"
-    t.string   "name"
-    t.string   "title"
-    t.binary   "data"
-  end
-
   create_table "events", :force => true do |t|
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false

@@ -22,7 +22,7 @@ Khoasite::Application.routes.draw do
      match '/create' , to: 'events#new' 
      match '/edit:id', to: 'events#edit'
      match '/index' , to: 'events#index'
-     
+     match '/projects', to: 'static_pages#mainproject'
     match '/fanorona', to: 'static_pages#fanorona'
     
     
