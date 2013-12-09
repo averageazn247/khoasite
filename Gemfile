@@ -4,15 +4,12 @@ gem 'rails', '3.2.8'
 gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby' 
 
-gem 'faker', '1.0.1'
+
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6' 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'simple_form' 
-gem 'rufus-scheduler'
-gem "paperclip", "~> 3.0"
-gem 'carrierwave'
+
 
 gem "combined_time_select", "~> 1.0.0"
 gem "mail" 

@@ -1,29 +1,14 @@
 <div class="center hero-unit">
-  <h1>Welcome to Khoa's website</h1>
+  <h1>A* Search</h1>
 
-  <h2>
-    by Khoa Bui using Ruby on Rails with SQLITE3 database
-    
-  </h2>
+ <p>
+ 	Depth First Search is a way to find the cheapest path from point A to point B. A* search first A common every day AI that could use depth first search is a GPS, global positioning system.
+ </p>
   
-  <% if signed_in? %>
- <%= link_to "Schedual  interview time", '/create', class: "btn  btn-primary" %>
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-  
- <%= link_to "My Current Appointments! ", current_user, class: "btn  btn-primary" %>
-  
-   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <%= link_to "View all Appointments", '/index' , class: "btn btn-primary"%> 
-       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-   <%= link_to "View all Projects", '/projects' , class: "btn btn-primary"%> 
  
- <% else %>
-  <%= link_to "Sign up now! ", signup_path, class: "btn  btn-primary" %>
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <%= link_to "Login!", '/signin', class: "btn btn-primary" %>
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-     <%= link_to "View all Projects", '/projects' , class: "btn btn-primary"%> 
-      
-  <% end %>
+ 
+ 
+     <%= link_to "A* Search", '/projects' , class: "btn btn-primary"%> 
+ 
 </div>
  
